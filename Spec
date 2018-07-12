@@ -1,1 +1,41 @@
-
+Game type: IDLE RPG style
+Components:
+  -Lvling :
+      * Wave and Level (10 wave with mini boss at the end)
+      * Different boss types (Mini,Raid,Epic with boosted drops)
+      * Fresh start ( enchant item )
+      * No clicking function (everyone hates)
+      * Achivment system with lvl up
+      * Account lvl
+      * Step back in lvls
+      
+  -Stats:
+      * Fighter and Mage stats
+      * Accuracy <--> Evasion
+      * Elemental stats (fire/water/wind/earth)
+      * Hp Regen
+  
+  -Battle system:
+      * Passive and Active Skill
+      * Different Classes (heavy, light, robe)
+      * Hp regeneration
+      * Stats
+      * Equipments for classes (heavy, light, robe, weapons)
+      
+  -Market
+  -Hero
+  -Equipments
+  -Enchant System
+  -TopList
+  -Craft (misc)
+  -Instance (ticket)
+  -Donate system
+      *AD system
+  -Clan/Guild
+  -Shop
+  -Licit ?
+  
+  
+  Currency: Gold, Ancient Coin, Soul, Gem
+  Names: Rebirth
+      
