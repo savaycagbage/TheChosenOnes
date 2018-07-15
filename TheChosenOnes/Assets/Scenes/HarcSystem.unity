@@ -619,6 +619,7 @@ MonoBehaviour:
   casspd: 0
   crit: 0
   magiccrit: 0
+  alive: 0
   GoldDrop: 10
 --- !u!1 &1184521288
 GameObject:
@@ -710,6 +711,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   MaxHP: 100
   CurrentHP: 0
+  HpReg: 10
   Patk: 10
   Matk: 0
   Pdef: 0
@@ -718,6 +720,7 @@ MonoBehaviour:
   casspd: 0
   crit: 0
   magiccrit: 0
+  alive: 0
 --- !u!95 &1184521292
 Animator:
   serializedVersion: 3

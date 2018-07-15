@@ -6,6 +6,7 @@ public class KarakterStatusz : MonoBehaviour {
 
     public float MaxHP=100;
     public float CurrentHP;
+    public float HpReg;
     public float Patk;
     public float Matk;
     public float Pdef;
@@ -14,7 +15,7 @@ public class KarakterStatusz : MonoBehaviour {
     public float casspd;
     public float crit;
     public float magiccrit;
-    bool alive;
+    public bool alive;
 
 	// Use this for initialization
 	void Start () {
@@ -27,6 +28,7 @@ public class KarakterStatusz : MonoBehaviour {
 		if(CurrentHP==0)
         {
             alive = false;
+
         }
 	}
 }

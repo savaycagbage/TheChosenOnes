@@ -14,7 +14,7 @@ public class EnemyStatusz : MonoBehaviour {
     public float casspd;
     public float crit;
     public float magiccrit;
-    bool alive;
+    public bool alive;
     public float GoldDrop;
     void Start () {
 
