@@ -1,4 +1,7 @@
 sceneSetups:
-- path: Assets/HarcSystem.unity
+- path: Assets/Scenes/SampleScene.unity
   isLoaded: 1
   isActive: 1
+- path: Assets/Scenes/HarcSystem.unity
+  isLoaded: 1
+  isActive: 0
