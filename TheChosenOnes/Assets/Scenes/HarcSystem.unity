@@ -615,7 +615,7 @@ MonoBehaviour:
   Matk: 0
   Pdef: 0
   Mdef: 0
-  atkspd: 0
+  atkspd: 1.5
   casspd: 0
   crit: 0
   magiccrit: 0
@@ -716,7 +716,7 @@ MonoBehaviour:
   Matk: 0
   Pdef: 0
   Mdef: 0
-  atkspd: 0
+  atkspd: 1
   casspd: 0
   crit: 0
   magiccrit: 0

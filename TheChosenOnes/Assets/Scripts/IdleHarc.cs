@@ -9,29 +9,35 @@ public class IdleHarc : MonoBehaviour {
     public EnemyStatusz enemy;
     public Text Gold;
     public float gold;
+    float karakterido;
+    float enemyido;
+
 	void Start () {
-        InvokeRepeating("Harc", 1f, 1f);
-        Gold.text = gold.ToString();
     }
 	
 	// Update is called once per frame
-	void FixedUpdate () {
+	void Update ()
+    {
 
-        float ido = Time.time;
-        Debug.Log(ido);
-        if(karakter.alive&&ido%1==0&&enemy.alive)
+        karakterido += Time.deltaTime;
+        enemyido += Time.deltaTime;
+        Debug.Log(karakterido);
+
+        if(karakter.alive&&karakterido>=karakter.atkspd&&enemy.alive)
         {
             KarakterAttack();
+            karakterido = 0;
         }
 
-        if (karakter.alive && ido % 1.5 == 0 && enemy.alive)
+        if (karakter.alive && enemyido>= enemy.atkspd && enemy.alive)
         {
             EnemyAttack();
+            enemyido = 0;
         }
 
         if (!karakter.alive)
         {
-            if(ido%1==0)
+            if(karakterido>=1)
             {
                 if(karakter.CurrentHP + karakter.HpReg < karakter.MaxHP)
                 {
@@ -41,7 +47,11 @@ public class IdleHarc : MonoBehaviour {
                 {
                     karakter.CurrentHP = karakter.MaxHP;
                 }
-                    
+                karakterido = 0;
+                if(karakter.CurrentHP==karakter.MaxHP)
+                {
+                    karakter.alive = true;
+                }
             }
             
         }
@@ -61,6 +71,8 @@ public class IdleHarc : MonoBehaviour {
             enemy.CurrentHP = enemy.MaxHP;
         }
     }
+
+
     void EnemyAttack()
     {
         if (karakter.CurrentHP - enemy.Patk>=0)
