@@ -112,7 +112,7 @@ MonoBehaviour:
   MaxHP: 100
   CurrentHP: 0
   HpReg: 10
-  Patk: 200
+  Patk: 10
   Matk: 0
   Pdef: 0
   Mdef: 0
@@ -265,7 +265,7 @@ Canvas:
   m_OverrideSorting: 0
   m_OverridePixelPerfect: 0
   m_SortingBucketNormalizedSize: 0
-  m_AdditionalShaderChannelsFlag: 0
+  m_AdditionalShaderChannelsFlag: 25
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_TargetDisplay: 0

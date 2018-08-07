@@ -124,7 +124,7 @@ GameObject:
   - component: {fileID: 103053665}
   - component: {fileID: 103053664}
   m_Layer: 5
-  m_Name: TextMeshPro Text
+  m_Name: Stage
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -145,7 +145,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 10.744, y: 252.4}
+  m_AnchoredPosition: {x: 10.743988, y: 252.4}
   m_SizeDelta: {x: -146.36398, y: -750.58167}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &103053664
@@ -297,11 +297,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Enemy: {fileID: 1135097704079892, guid: 3721f4faadd6b924f88ed545bd8454c4, type: 2}
   enemy: {fileID: 0}
-  Level: {fileID: 0}
-  Stage: {fileID: 0}
-  level: 0
-  stage: 0
-  spawntime: 2
+  spawntime: 0
 --- !u!4 &228499434
 Transform:
   m_ObjectHideFlags: 0
@@ -405,7 +401,7 @@ RectTransform:
   - {fileID: 103053663}
   - {fileID: 1942403635}
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -657,6 +653,50 @@ Animator:
   m_CorrespondingSourceObject: {fileID: 95766642735540288, guid: f445498057f1fc746b7be8fa94f3b9ea,
     type: 2}
   m_PrefabInternal: {fileID: 1562689089}
+--- !u!1 &913394526
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 913394528}
+  - component: {fileID: 913394527}
+  m_Layer: 0
+  m_Name: Level_Stage
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &913394527
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 913394526}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b7862fc68755355428c905b6eec70ea3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Level: {fileID: 1273328766}
+  Stage: {fileID: 103053664}
+  level: 1
+  stage: 1
+--- !u!4 &913394528
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 913394526}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.41486752, y: -0.08320631, z: 35.791424}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1031800378
 GameObject:
   m_ObjectHideFlags: 0
@@ -986,12 +1026,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4388560710820618, guid: f445498057f1fc746b7be8fa94f3b9ea, type: 2}
       propertyPath: m_RootOrder
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 223412925170054324, guid: f445498057f1fc746b7be8fa94f3b9ea,
-        type: 2}
-      propertyPath: m_AdditionalShaderChannelsFlag
-      value: 25
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f445498057f1fc746b7be8fa94f3b9ea, type: 2}
@@ -1025,7 +1060,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gold: 0
   goldtext: {fileID: 602631925}
-  Level: {fileID: 1273328766}
 --- !u!4 &1875434790
 Transform:
   m_ObjectHideFlags: 0

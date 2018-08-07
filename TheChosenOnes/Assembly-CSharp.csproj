@@ -67,6 +67,7 @@
     <Compile Include="Assets\Scripts\EnemyStatusz.cs" />
     <Compile Include="Assets\Scripts\KarakterAttack.cs" />
     <Compile Include="Assets\Scripts\KarakterStatusz.cs" />
+    <Compile Include="Assets\Scripts\Level_Stage.cs" />
     <Compile Include="Assets\Scripts\Login.cs" />
     <Compile Include="Assets\Scripts\ProbaScript.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark01.cs" />

@@ -2,15 +2,18 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class EnemyStatusz : MonoBehaviour
 {
 
 
-    public Pénzeszközök pénz;
+    public Currencies pénz;
     public KarakterStatusz karakter;
     public Image hpbar;
     public Animator attackanim;
+    public Level_Stage szint;
+    public TextMeshProUGUI BOSS;
     float hpbarstatus;
 
     public float MaxHP = 100;
@@ -31,6 +34,30 @@ public class EnemyStatusz : MonoBehaviour
     {
         pénz = Currencies.FindObjectOfType<Currencies>();
         karakter = KarakterStatusz.FindObjectOfType<KarakterStatusz>();
+        szint = Level_Stage.FindObjectOfType<Level_Stage>();
+
+
+
+        Patk = Patk * Mathf.Pow(1.3f, szint.level-1);
+        Patk=Mathf.RoundToInt(Patk);
+        MaxHP = MaxHP * Mathf.Pow(1.3f, szint.level-1);
+        MaxHP=Mathf.RoundToInt(MaxHP);
+        GoldDrop = GoldDrop * Mathf.Pow(1.3f, szint.level-1);
+        GoldDrop=Mathf.RoundToInt(GoldDrop);
+        
+        if(szint.stage==10)
+        {
+            BOSS.enabled = true;
+            Patk = Patk * 2;
+            MaxHP = MaxHP * 2;
+            GoldDrop = GoldDrop * 2;
+        }
+        else
+        {
+            BOSS.enabled = false;
+        }
+
+
         CurrentHP = MaxHP;
         alive = true;
         ido = 0;
@@ -41,7 +68,8 @@ public class EnemyStatusz : MonoBehaviour
 	
 	void Update ()
     {
-        
+
+
         hpbarstatus = CurrentHP / MaxHP;
         hpbar.rectTransform.localScale = new Vector3(hpbarstatus, 1);
         if (karakter.alive)
@@ -59,16 +87,20 @@ public class EnemyStatusz : MonoBehaviour
         {
             alive = false;
             pénz.gold += GoldDrop;
+            if(szint.stage==10)
+            {
+                szint.level +=1;
+                szint.stage = 1;
+            }
+            else
+            {
+                szint.stage += 1;
+            }
             
             Destroy(this.gameObject);
         }
 		
 	}
-
-
-
-
-
 
 
     void EnemyAttack()

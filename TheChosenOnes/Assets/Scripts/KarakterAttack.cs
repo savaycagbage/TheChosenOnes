@@ -25,7 +25,6 @@ public class KarakterAttack : MonoBehaviour {
             
             karakterido += Time.deltaTime;
             
-            Debug.Log(karakterido);
             if (karakter.alive && karakterido >= karakter.atkspd && enemy.alive)
             {
 
