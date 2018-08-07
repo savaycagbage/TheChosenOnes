@@ -1,8 +1,12 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class KarakterStatusz : MonoBehaviour {
+
+    public Image hpbar;
+    float hpbarstatus;
 
     public float MaxHP=100;
     public float CurrentHP;
@@ -18,17 +22,22 @@ public class KarakterStatusz : MonoBehaviour {
     public bool alive;
 
 	// Use this for initialization
-	void Start () {
+	void Start ()
+    {
         CurrentHP = MaxHP;
         alive = true;
 	}
 	
 	// Update is called once per frame
-	void Update () {
-		if(CurrentHP==0)
+	void Update ()
+    {
+        hpbarstatus = CurrentHP / MaxHP;
+        hpbar.rectTransform.localScale = new Vector3(hpbarstatus, 1);
+
+
+        if (CurrentHP==0)
         {
             alive = false;
-
         }
 	}
 }
