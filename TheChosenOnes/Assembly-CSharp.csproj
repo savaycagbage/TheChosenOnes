@@ -62,7 +62,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Scripts\Client.cs" />
+    <Compile Include="Assets\Scripts\CombatUpgrade.cs" />
     <Compile Include="Assets\Scripts\Currencies.cs" />
+    <Compile Include="Assets\Scripts\DestroyPopUp.cs" />
     <Compile Include="Assets\Scripts\EnemySpawner.cs" />
     <Compile Include="Assets\Scripts\EnemyStatusz.cs" />
     <Compile Include="Assets\Scripts\KarakterAttack.cs" />

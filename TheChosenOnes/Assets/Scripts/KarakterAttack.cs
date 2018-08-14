@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class KarakterAttack : MonoBehaviour {
 
@@ -8,15 +9,16 @@ public class KarakterAttack : MonoBehaviour {
     public EnemyStatusz enemy;
     float karakterido;
     public Animator attackanim;
+    public TextMeshProUGUI PopUp;
     float speed;
-	
+    float AttackRange;
 	
 	void FixedUpdate ()
     {
         enemy = EnemyStatusz.FindObjectOfType<EnemyStatusz>();
         speed = attackanim.speed;
         karakter.atkspd = 1f / speed;
-
+        
 
 
 
@@ -65,12 +67,17 @@ public class KarakterAttack : MonoBehaviour {
 
     void KarakterHit()
     {
+        TextMeshProUGUI instance=Instantiate(PopUp);
+        instance.transform.SetParent(GameObject.Find("Canvas").transform, false);
+        
+        
         attackanim.Play("KarakterAttack");
-        Debug.Log("levette a hp-bol");
-        if (enemy.CurrentHP - karakter.Patk >= 0)
+        AttackRange = Random.Range(Mathf.RoundToInt(karakter.Patk*0.8f),Mathf.RoundToInt(karakter.Patk * 1.2f));
+        PopUp.text = AttackRange.ToString();
+        if (enemy.CurrentHP - AttackRange >= 0)
         {
 
-           enemy.CurrentHP -= karakter.Patk;
+           enemy.CurrentHP -= AttackRange;
 
         }
         else

@@ -5,6 +5,8 @@ TagManager:
   serializedVersion: 2
   tags:
   - "P\xE9nzeszk\xF6z\xF6k"
+  - Canvas
+  - Enemy
   layers:
   - Default
   - TransparentFX
