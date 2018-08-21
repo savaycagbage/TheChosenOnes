@@ -75,8 +75,8 @@ public class EnemyStatusz : MonoBehaviour
         if (karakter.alive)
         {
             ido += Time.deltaTime;
-            attackanim.Play("EnemyAttack");
-            if (ido>=1.5)
+            
+            if (ido>=1f)
             {
                 EnemyAttack();
                 ido = 0;
@@ -105,8 +105,7 @@ public class EnemyStatusz : MonoBehaviour
 
     void EnemyAttack()
     {
-        
-
+        attackanim.Play("Enemy_Attack_anim");
         if (karakter.CurrentHP - Patk >= 0)
         {
             karakter.CurrentHP -= Patk;

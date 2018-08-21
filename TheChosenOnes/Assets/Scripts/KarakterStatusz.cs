@@ -2,12 +2,18 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class KarakterStatusz : MonoBehaviour {
 
     public Image hpbar;
     float hpbarstatus;
-
+    public TextMeshProUGUI DMGperS;
+    public TextMeshProUGUI Attack;
+    public TextMeshProUGUI AttackSpeed;
+    public TextMeshProUGUI Defense;
+    public TextMeshProUGUI MAXHP;
+    public TextMeshProUGUI HPREG;
     public float MaxHP=100;
     public float CurrentHP;
     public float HpReg;
@@ -33,11 +39,21 @@ public class KarakterStatusz : MonoBehaviour {
     {
         hpbarstatus = CurrentHP / MaxHP;
         hpbar.rectTransform.localScale = new Vector3(hpbarstatus, 1);
-
+        CharacterStats();
 
         if (CurrentHP==0)
         {
             alive = false;
         }
 	}
+
+    public void CharacterStats()
+    {
+        DMGperS.text = "Dmg/s: " + (Patk * (1/atkspd));
+        Attack.text = "P.atk: " + Patk;
+        Defense.text = "Defense: " + Pdef;
+        AttackSpeed.text = "Attackspd: " + (1/atkspd);
+        MAXHP.text = "Maxhp: " + MaxHP;
+        HPREG.text = "Hpreg: " + HpReg;
+    }
 }

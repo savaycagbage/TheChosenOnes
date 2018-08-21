@@ -21,7 +21,7 @@ GameObject:
   - component: {fileID: 4961018604773894}
   - component: {fileID: 212198758114439126}
   - component: {fileID: 114443482705643196}
-  - component: {fileID: 95777496479553358}
+  - component: {fileID: 95994320359033674}
   m_Layer: 0
   m_Name: Enemy
   m_TagString: Enemy
@@ -89,15 +89,15 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1135097704079892}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.81, y: 0.74, z: 0}
-  m_LocalScale: {x: 1.5, y: 1.5, z: 1}
+  m_LocalPosition: {x: 1.66, y: 1.56, z: 0}
+  m_LocalScale: {x: 0.52738804, y: 0.53676, z: 0.284}
   m_Children:
   - {fileID: 224964070123023470}
   - {fileID: 224671925050583942}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!95 &95777496479553358
+--- !u!95 &95994320359033674
 Animator:
   serializedVersion: 3
   m_ObjectHideFlags: 1
@@ -106,7 +106,7 @@ Animator:
   m_GameObject: {fileID: 1135097704079892}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 0f2b06eb24bde6947947b0455c73211e, type: 2}
+  m_Controller: {fileID: 9100000, guid: 57eb075f99dcd2440908276d50eff75e, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -156,7 +156,7 @@ MonoBehaviour:
   "p\xE9nz": {fileID: 0}
   karakter: {fileID: 0}
   hpbar: {fileID: 114071695484555180}
-  attackanim: {fileID: 95777496479553358}
+  attackanim: {fileID: 95994320359033674}
   szint: {fileID: 0}
   BOSS: {fileID: 114808033450646326}
   MaxHP: 100
@@ -225,8 +225,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294379520
-  m_fontColor: {r: 0, g: 0.033354584, b: 0.9716981, a: 1}
+    rgba: 4278321400
+  m_fontColor: {r: 0.972549, g: 0, b: 0.009720611, a: 1}
   m_enableVertexGradient: 0
   m_fontColorGradient:
     topLeft: {r: 1, g: 1, b: 1, a: 1}
@@ -243,8 +243,8 @@ MonoBehaviour:
   m_outlineColor:
     serializedVersion: 2
     rgba: 4278190080
-  m_fontSize: 30
-  m_fontSizeBase: 30
+  m_fontSize: 80
+  m_fontSizeBase: 80
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -345,9 +345,9 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 2172ddb8453a74748bbb83f376707232, type: 3}
-  m_Color: {r: 0.6792453, g: 0.022427924, b: 0.022427924, a: 1}
-  m_FlipX: 0
+  m_Sprite: {fileID: 21300000, guid: 4dd06eb650dd91947a5998fd14494866, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 1
   m_FlipY: 0
   m_DrawMode: 0
   m_Size: {x: 1, y: 1}
@@ -433,7 +433,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 0, y: 0.5}
   m_AnchoredPosition: {x: 0.000045776367, y: 0}
-  m_SizeDelta: {x: 151.69, y: 10.43}
+  m_SizeDelta: {x: 509.229, y: 30.252}
   m_Pivot: {x: 0, y: 0.5}
 --- !u!224 &224671925050583942
 RectTransform:
@@ -451,8 +451,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.021387976, y: 0.6596184}
-  m_SizeDelta: {x: 151.69, y: 10.43}
+  m_AnchoredPosition: {x: 0.12, y: 2.24}
+  m_SizeDelta: {x: 509.229, y: 30.252}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!224 &224964070123023470
 RectTransform:
@@ -469,6 +469,6 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.016, y: -0.021}
-  m_SizeDelta: {x: 110.6756, y: 50}
+  m_AnchoredPosition: {x: 0.12, y: 2.95}
+  m_SizeDelta: {x: 587.188, y: 358.275}
   m_Pivot: {x: 0.5, y: 0.5}

@@ -57,7 +57,7 @@ GameObject:
   - component: {fileID: 212246134402901788}
   - component: {fileID: 114054656441942744}
   - component: {fileID: 114762901257366726}
-  - component: {fileID: 95766642735540288}
+  - component: {fileID: 95873747689828140}
   m_Layer: 0
   m_Name: Karakter
   m_TagString: Untagged
@@ -72,14 +72,14 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1983427009512704}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.65, y: 0.74, z: 0}
-  m_LocalScale: {x: 1.5, y: 1.5, z: 1}
+  m_LocalPosition: {x: -1.54, y: 1.399, z: 0}
+  m_LocalScale: {x: 0.386856, y: 0.386856, z: 0.257904}
   m_Children:
   - {fileID: 224894493324612248}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!95 &95766642735540288
+--- !u!95 &95873747689828140
 Animator:
   serializedVersion: 3
   m_ObjectHideFlags: 1
@@ -88,7 +88,7 @@ Animator:
   m_GameObject: {fileID: 1983427009512704}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 835116e70d0f95b4282dd1fe993e0ebd, type: 2}
+  m_Controller: {fileID: 9100000, guid: 5ed5841bf87fa4f439849e06214498ce, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -109,10 +109,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hpbar: {fileID: 114973002523960884}
+  DMGperS: {fileID: 0}
+  Attack: {fileID: 0}
+  AttackSpeed: {fileID: 0}
+  Defense: {fileID: 0}
+  MAXHP: {fileID: 0}
+  HPREG: {fileID: 0}
   MaxHP: 100
   CurrentHP: 0
   HpReg: 10
-  Patk: 10
+  Patk: 15
   Matk: 0
   Pdef: 0
   Mdef: 0
@@ -161,7 +167,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   karakter: {fileID: 114054656441942744}
   enemy: {fileID: 0}
-  attackanim: {fileID: 95766642735540288}
+  attackanim: {fileID: 95873747689828140}
   PopUp: {fileID: 114699083862050786, guid: ac745a5d28cc9704b9038be20774c0af, type: 2}
 --- !u!114 &114973002523960884
 MonoBehaviour:
@@ -225,8 +231,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 6cc6109ac6db9c54a9490f784c6748bd, type: 3}
-  m_Color: {r: 0, g: 0.6792453, b: 0.20592709, a: 1}
+  m_Sprite: {fileID: 21300000, guid: fa05d21366349a94fb455ae301934027, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -286,8 +292,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.03700654, y: 0.6596184}
-  m_SizeDelta: {x: 151.69, y: 10.43}
+  m_AnchoredPosition: {x: -0.33, y: 3.5}
+  m_SizeDelta: {x: 646.562, y: 39.63}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!224 &224906489352179498
 RectTransform:
@@ -304,6 +310,6 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 0, y: 0.5}
-  m_AnchoredPosition: {x: 0.000045776367, y: 0}
-  m_SizeDelta: {x: 151.69, y: 10.43}
+  m_AnchoredPosition: {x: 0.000030517578, y: 0}
+  m_SizeDelta: {x: 646.562, y: 39.63}
   m_Pivot: {x: 0, y: 0.5}
