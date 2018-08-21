@@ -30,7 +30,7 @@ public class EnemyStatusz : MonoBehaviour
     float ido;
 
 
-    void Start ()
+    void Start()
     {
         pénz = Currencies.FindObjectOfType<Currencies>();
         karakter = KarakterStatusz.FindObjectOfType<KarakterStatusz>();
@@ -38,14 +38,14 @@ public class EnemyStatusz : MonoBehaviour
 
 
 
-        Patk = Patk * Mathf.Pow(1.3f, szint.level-1);
-        Patk=Mathf.RoundToInt(Patk);
-        MaxHP = MaxHP * Mathf.Pow(1.3f, szint.level-1);
-        MaxHP=Mathf.RoundToInt(MaxHP);
-        GoldDrop = GoldDrop * Mathf.Pow(1.3f, szint.level-1);
-        GoldDrop=Mathf.RoundToInt(GoldDrop);
-        
-        if(szint.stage==10)
+        Patk = Patk * Mathf.Pow(1.3f, szint.level - 1);
+        Patk = Mathf.RoundToInt(Patk);
+        MaxHP = MaxHP * Mathf.Pow(1.3f, szint.level - 1);
+        MaxHP = Mathf.RoundToInt(MaxHP);
+        GoldDrop = GoldDrop * Mathf.Pow(1.3f, szint.level - 1);
+        GoldDrop = Mathf.RoundToInt(GoldDrop);
+
+        if (szint.stage == 10)
         {
             BOSS.enabled = true;
             Patk = Patk * 2;
@@ -62,11 +62,11 @@ public class EnemyStatusz : MonoBehaviour
         alive = true;
         ido = 0;
 
-	}
+    }
 
 
-	
-	void Update ()
+
+    void Update()
     {
 
 
@@ -75,44 +75,37 @@ public class EnemyStatusz : MonoBehaviour
         if (karakter.alive)
         {
             ido += Time.deltaTime;
-            
-            if (ido>=1f)
+
+            if (ido >= 1f)
             {
-                EnemyAttack();
+                attackanim.Play("Enemy_Attack_anim");
                 ido = 0;
             }
         }
+        else
+        {
+            attackanim.Play("Enemy_Idle_Anim");
+        }
 
-        if (CurrentHP<=0)
+        if (CurrentHP <= 0)
         {
             alive = false;
             pénz.gold += GoldDrop;
-            if(szint.stage==10)
+            if (szint.stage == 10)
             {
-                szint.level +=1;
+                szint.level += 1;
                 szint.stage = 1;
             }
             else
             {
                 szint.stage += 1;
             }
-            
+
             Destroy(this.gameObject);
         }
-		
-	}
 
-
-    void EnemyAttack()
-    {
-        attackanim.Play("Enemy_Attack_anim");
-        if (karakter.CurrentHP - Patk >= 0)
-        {
-            karakter.CurrentHP -= Patk;
-        }
-        else
-        {
-            karakter.CurrentHP = 0;
-        }
     }
 }
+
+
+    

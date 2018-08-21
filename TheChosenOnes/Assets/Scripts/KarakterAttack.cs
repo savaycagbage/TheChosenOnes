@@ -3,7 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 
-public class KarakterAttack : MonoBehaviour {
+public class KarakterAttack : MonoBehaviour
+{
 
     public KarakterStatusz karakter;
     public EnemyStatusz enemy;
@@ -12,13 +13,14 @@ public class KarakterAttack : MonoBehaviour {
     public TextMeshProUGUI PopUp;
     float speed;
     float AttackRange;
-	
-	void FixedUpdate ()
+    float ido2;
+
+    void FixedUpdate()
     {
         enemy = EnemyStatusz.FindObjectOfType<EnemyStatusz>();
         speed = attackanim.speed;
         karakter.atkspd = 1f / speed;
-        
+
 
 
 
@@ -28,23 +30,20 @@ public class KarakterAttack : MonoBehaviour {
 
             karakterido += Time.deltaTime;
 
-            if (karakter.alive)
+            if (karakter.alive && enemy.alive)
             {
-                
 
-                
 
-                if(karakterido>=karakter.atkspd)
+                if (karakterido >= karakter.atkspd)
                 {
                     attackanim.Play("Karakter_Attack_anim");
-                    KarakterHit();
                     karakterido = 0;
                 }
-                
+
             }
             else
             {
-                
+
                 if (karakterido >= 1)
                 {
                     if (karakter.CurrentHP + karakter.HpReg < karakter.MaxHP)
@@ -68,30 +67,10 @@ public class KarakterAttack : MonoBehaviour {
         }
         else
         {
+            attackanim.Play("Idle_animation");
             karakterido = 0;
-        
-        }
-
-    }
-
-    void KarakterHit()
-    {
-        TextMeshProUGUI instance=Instantiate(PopUp);
-        instance.transform.SetParent(GameObject.Find("Canvas").transform, false);
-        
-        
-        
-        AttackRange = Random.Range(Mathf.RoundToInt(karakter.Patk*0.8f),Mathf.RoundToInt(karakter.Patk * 1.2f));
-        PopUp.text = AttackRange.ToString();
-        if (enemy.CurrentHP - AttackRange >= 0)
-        {
-
-           enemy.CurrentHP -= AttackRange;
 
         }
-        else
-        {
-           enemy.CurrentHP = 0;
-        }
+
     }
 }

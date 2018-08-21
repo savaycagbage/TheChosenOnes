@@ -94,6 +94,8 @@
     <Compile Include="Assets\Assets\TextMesh Pro\Examples &amp; Extras\Scripts\VertexShakeB.cs" />
     <Compile Include="Assets\Assets\TextMesh Pro\Examples &amp; Extras\Scripts\VertexZoom.cs" />
     <Compile Include="Assets\Assets\TextMesh Pro\Examples &amp; Extras\Scripts\WarpTextExample.cs" />
+    <Compile Include="Assets\Attack.cs" />
+    <Compile Include="Assets\EnemyAttack.cs" />
     <Compile Include="Assets\Scripts\Client.cs" />
     <Compile Include="Assets\Scripts\CombatUpgrade.cs" />
     <Compile Include="Assets\Scripts\Currencies.cs" />
